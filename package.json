@@ -1,0 +1,24 @@
+{
+  "name": "test_delfi_typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "serverless offline",
+    "deploy": "serverless deploy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.104",
+    "esbuild": "^0.15.8",
+    "install": "^0.13.0",
+    "mongodb": "^4.10.0",
+    "npm": "^8.19.2",
+    "serverless": "^3.22.0",
+    "serverless-esbuild": "^1.32.8",
+    "serverless-offline": "^10.1.0"
+  }
+}
