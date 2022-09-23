@@ -1,0 +1,21 @@
+service: cardToken
+
+useDotenv: true
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+functions:
+  cardToken:
+    handler: src/index.cardToken
+    events:
+      - httpApi: POST /tokens
+  GetDataCard:
+    handler: src/index.GetDataCard
+    events:
+      - httpApi: GET /tokens
+
+plugins:
+  - serverless-esbuild
+  - serverless-offline
