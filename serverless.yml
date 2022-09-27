@@ -11,10 +11,13 @@ functions:
     handler: src/index.cardToken
     events:
       - httpApi: POST /tokens
-  GetDataCard:
-    handler: src/index.GetDataCard
+
+  GetDataCardByToken:
+    handler: src/index.GetDataCardByToken
     events:
-      - httpApi: GET /tokens
+      - httpApi: 
+          method: GET
+          path: /tokens
 
 plugins:
   - serverless-esbuild

@@ -24,17 +24,17 @@ import * as mongoDB from "mongodb";
 import * as dotenv from "dotenv";
 
 
-export const collections: { Token?: mongoDB.Collection } = {}
+// export const collections: { Token?: mongoDB.Collection } = {}
 
-export async function connectToDatabase () {
-    dotenv.config();
+// export async function connectToDatabase () {
+//     dotenv.config();
  
-    const client: mongoDB.MongoClient = new mongoDB.MongoClient("mongodb+srv://mongots:6nU2vqM2DXd3m5V@cluster0.ydbgolq.mongodb.net/?retryWrites=true&w=majority"); 
-    await client.connect();
+//     const client: mongoDB.MongoClient = new mongoDB.MongoClient("mongodb+srv://mongots:6nU2vqM2DXd3m5V@cluster0.ydbgolq.mongodb.net/?retryWrites=true&w=majority"); 
+//     await client.connect();
         
-    const db: mongoDB.Db = client.db(process.env.DB_NAME);
-    const TokensCollection: mongoDB.Collection = db.collection("Token");
-    collections.Token = TokensCollection;
-    // //    
-    console.log(`Successfully connected to database: ${db.databaseName} and collection: ${TokensCollection.collectionName}`);
- }
+//     const db: mongoDB.Db = client.db(process.env.DB_NAME);
+//     const TokensCollection: mongoDB.Collection = db.collection("Token");
+//     collections.Token = TokensCollection;
+//     // //    
+//     console.log(`Successfully connected to database: ${db.databaseName} and collection: ${TokensCollection.collectionName}`);
+//  }
